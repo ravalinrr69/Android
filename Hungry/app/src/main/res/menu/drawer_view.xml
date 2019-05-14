@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/drawer_shadow"
+            android:title="ABC" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/drawer_shadow"
+            android:title="DEF" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_drawer"
+            android:title="GHI" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_drawer"
+            android:title="JKL" />
+    </group>
+</menu>

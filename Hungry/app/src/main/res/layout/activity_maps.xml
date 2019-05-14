@@ -1,0 +1,118 @@
+<!-- Use DrawerLayout as root container for activity -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    >
+
+
+
+   <!-- <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
+
+     <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          tools:context="androidservices.ravalinrr.com.myapplication11.MapsActivity" >
+
+
+         <!--<TextView
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:text="Hungry!!"
+             android:textDirection="firstStrong"
+             android:textStyle="bold"
+             android:textSize="20dp"
+             android:textColor="#000000"/>-->
+
+
+          <android.support.v7.widget.Toolbar
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/toolbar2"
+              android:text="Hungry!!"
+              app:titleTextColor="#696969">
+
+          </android.support.v7.widget.Toolbar>
+
+
+          <fragment
+              android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:layout_alignParentStart="true"
+              android:layout_below="@+id/toolbar2"
+              android:layout_marginTop="13dp" />
+
+
+         <android.support.v7.widget.AppCompatButton
+              android:id="@+id/pin_current_location"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/display_or_edit_loc"
+              android:layout_centerHorizontal="true"
+              android:background="@color/colorTextHint"
+              android:layout_marginBottom="23dp"
+              android:text="My Reviews"
+              android:textAllCaps="false"
+              android:textSize="20dp"
+              android:layout_centerInParent="true"
+              android:onClick="myReviews"
+              />
+
+          <EditText
+              android:id="@+id/display_or_edit_loc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_above="@+id/save_location"
+              android:layout_alignParentStart="true"
+              android:layout_marginBottom="22dp"
+              android:textColor="#ffffff"/>
+
+         <android.support.v7.widget.AppCompatButton
+              android:id="@+id/save_location"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="23dp"
+              android:text="Check-In"
+              android:background="@color/colorTextHint"
+              android:textAllCaps="false"
+              android:textSize="20dp"
+              android:layout_centerInParent="true"
+              android:onClick="saveLocation"/>
+
+        <!--  <android.support.v7.widget.SearchView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignBottom="@+id/toolbar2"
+              android:layout_alignParentEnd="true"
+              android:layout_marginEnd="12dp"
+              android:id="@+id/searchView"></android.support.v7.widget.SearchView>
+-->
+     </RelativeLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_header" />
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
