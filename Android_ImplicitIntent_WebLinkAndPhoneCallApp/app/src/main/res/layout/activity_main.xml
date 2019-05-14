@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.assignment2.MainActivity"
+    android:orientation="vertical"
+    android:background="#3e677e">
+
+    <TextView
+        android:id="@+id/implicit_intents_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Implicit Intents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:paddingTop="15dp"/>
+
+    <TextView
+        android:id="@+id/url_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/implicit_intents_tv"
+        android:text="URL: "
+        android:textColor="#ffffff"
+        android:paddingLeft="20dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/url_value_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/url_tv"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/url_tv"
+        android:inputType="textUri"
+        android:maxWidth="100dp"
+        android:paddingRight="50dp"/>
+
+    <Button
+        android:id="@+id/launch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/url_value_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Launch"
+        android:textAllCaps="false"
+        android:background="#FFFF00"
+        android:textSize="20dp"/>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/launch_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="#FFFF00"/>
+
+    <TextView
+        android:id="@+id/phone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="20dp"
+        android:text="Phone: "
+        android:textColor="#ffffff"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/phone_value_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/line_view"
+        android:layout_alignTop="@+id/phone_tv"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/phone_tv"
+        android:inputType="text"
+        android:maxWidth="100dp"
+        android:paddingRight="50dp"/>
+
+   <Button
+        android:id="@+id/ring_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_value_et"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Ring"
+        android:textAllCaps="false"
+        android:background="#FF0000"
+        android:textSize="20dp"/>
+
+    <View
+        android:id="@+id/line_view2"
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_below="@id/ring_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="#FFFF00"/>
+
+    <Button
+        android:layout_width="132dp"
+        android:layout_height="47dp"
+        android:layout_alignStart="@+id/implicit_intents_tv"
+        android:layout_below="@+id/line_view2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="27dp"
+        android:background="#000000"
+        android:text="Close App"
+        android:textColor="#ffffff"
+        android:onClick="closeApp"/>
+
+
+</RelativeLayout>
