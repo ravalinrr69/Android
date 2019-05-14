@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    >
+
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:text="Review"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textColor="#ffffff"/>
+
+
+    <EditText
+        android:id="@+id/review_tv"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/review_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/submit_review"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:onClick="save"
+        android:text="Save My Review"
+        android:background="@color/colorTextHint"
+        android:textSize="15dp"
+        android:textAllCaps="false"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/myReviews"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_review"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:background="@color/colorTextHint"
+        android:onClick="myReviews"
+        android:text="My Reviews"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+</RelativeLayout>
