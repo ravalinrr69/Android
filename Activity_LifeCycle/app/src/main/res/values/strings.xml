@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AndroidLifeCycle</string>
+    <string name="title_activity_a">activity_a</string>
+    <string name="title_activity_b">activity_b</string>
+</resources>
