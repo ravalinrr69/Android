@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d98ba"
+    tools:context="com.example.android.currencyconverter.MainActivity">
+
+    <TextView
+        android:id="@+id/app_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:paddingTop="20dp"
+        android:text="Currency Converter App"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dollar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_tv"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="43dp"
+        android:paddingLeft="20dp"
+        android:text="Dollar Amount ($): "
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/dollar_editText"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dollar_tv"
+        android:layout_alignBottom="@+id/dollar_tv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:inputType="numberDecimal"
+       />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/app_tv"
+        android:layout_below="@+id/dollar_editText"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="25dp"
+        android:text="Convert to: "
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/result_tv"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/dollar_editText"
+         />
+
+    <Button
+        android:id="@+id/euro_tv"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/result_tv"
+        android:layout_below="@+id/result_tv"
+        android:layout_marginTop="17dp"
+        android:background="#ffffff"
+        android:onClick="displayEuroEt"
+        android:text="Euro"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/indian_rupee_tv"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/euro_tv"
+        android:layout_below="@+id/euro_tv"
+        android:layout_marginTop="14dp"
+        android:background="#ffffff"
+        android:onClick="displayIndianRupeeEt"
+        android:text="Indian Rupee"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/pound_tv"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/indian_rupee_tv"
+        android:layout_below="@+id/indian_rupee_tv"
+        android:layout_marginTop="18dp"
+        android:background="#ffffff"
+        android:onClick="displayBritishPoundEt"
+        android:text="British Pound"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dollar_tv"
+        android:layout_alignStart="@+id/app_tv"
+        android:layout_below="@+id/pound_tv"
+        android:layout_marginTop="24dp"
+        android:background="#228B22"
+        android:onClick="convert"
+        android:text="Convert"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/convert_button"
+        android:layout_alignBottom="@+id/convert_button"
+        android:layout_alignEnd="@+id/pound_tv"
+        android:layout_alignStart="@+id/pound_tv"
+        android:layout_marginStart="20dp"
+        android:background="#ff0000"
+        android:onClick="closeApp"
+        android:text="Close"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/converted_amount_tv"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/close_button"
+        android:layout_below="@+id/convert_button"
+        android:layout_marginTop="13dp"
+        android:text=" "
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+</RelativeLayout>
